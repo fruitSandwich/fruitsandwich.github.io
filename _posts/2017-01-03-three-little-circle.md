@@ -24,7 +24,7 @@ categories: [d3,翻译]
 
 <!--more-->
 
-<script src='/d3.min.js'></script>
+<script src='/asserts/201701/d3.min.js'></script>
 
 ## 选择元素
 <a href='https://github.com/d3/d3/wiki/Selections#selectAll'>d3.selectAll</a>方法需要一个<a href='https://www.w3.org/TR/CSS2/selector.html'>选择器</a>,例如"circle",然后返回一个匹配元素的集合<i>selection</i>:
