@@ -35,7 +35,9 @@ function chart(config) {
   // generate chart here, using `config.width` and `config.height`
 }
 ```
+
 可是，调用者就得管理图表函数（假设你有多种不同的图表类型可选择）还有配置对象。绑定图表配置到图表函数，我们需要一个<a href='http://jibbering.com/faq/notes/closures/'>闭包</a>
+
 ```
 function chart(config) {
   return function() {
@@ -43,15 +45,19 @@ function chart(config) {
   };
 }
 ```
+
 这样，调用者只需要这样写：
+
 ```
 var myChart = chart({width: 720, height: 80});
 ```
+
 随后，调用myChart()更新图表，很简单！
 
 
 ## 更新配置
 假如你想要在图表构造之后更新配置呢？或者说你想要获取一个已经存在的图表的配置呢？配置对象被封在闭包里，外部是无法访问的。幸运的是，javascript<a href='https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function'>函数即对象</a>,所以可以把配置属性存到函数本身！
+
 ```
 var myChart = chart();//myChart是chart()返回的my函数
 myChart.width = 720;
@@ -68,19 +74,25 @@ function chart() {
   };
 }
 ```
+
 用上一点语法糖，可以替换元属性的getter-setter方法就能使用链式调用。这样调用者就可以采用一种更优美的方式来构造表格，chart也可以管理配置参数更改带来的副作用。图表也可以提供默认的配置值。构建一个新图表然后设置两个参数：
+
 ```
 var myChart = chart().width(720).height(80);
 ```
+
 更新已经存在的chart也很简单：
 
 ```
 myChart.height(500);
 ```
+
 然后是获取值：
+
 ```
 myChart.height(); // 500
 ```
+
 chart内部实现稍微改的复杂一些，需要提供getter-setter方法，但是给使用者带来的便利值得开发者额外的努力！（此外，这种模式在你使用一段时间之后会变得非常自然）
 
 ```
@@ -116,14 +128,19 @@ function chart() {
 以selection作为输入，图表会有更大的灵活性。比如可以同事渲染一个图表到多个元素，或者在元素之间移动图表并不需要数据和元素的解绑和重新绑定。可以直接通过配置的变化之间控制图表的更新（比如使用过度而不是瞬时更新）。因此，chart成为渲染数据可视化的橡皮图章。
 
 通过selection调用chart函数最简单的方式是把selection当做参数传递：
+
 ```
 myChart(selection);
 ```
+
 同样的，用selection.call也可以：
+
 ```
 selection.call(myChart);
 ```
+
 chart函数内部基础实现看起来是这个样子的：
+
 ```
 function my(selection) {
   selection.each(function(d, i) {
