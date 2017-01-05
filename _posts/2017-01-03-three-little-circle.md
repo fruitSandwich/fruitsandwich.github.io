@@ -22,6 +22,8 @@ categories: [d3,翻译]
 
 这份教程将向你展示怎样用选择器来控制它们
 
+原文地址：<a href='https://bost.ocks.org/mike/circles/'>https://bost.ocks.org/mike/circles/</a>
+
 <!--more-->
 
 <script src='/asserts/201701/d3.min.js'></script>
