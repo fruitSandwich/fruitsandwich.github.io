@@ -119,7 +119,7 @@ $.get('./a.json', function (data) {
 })
 ```
 
-使用回调嵌套可以得到正确的结果，但是看起来就没那么好看了（最后两行的闭合标签和容易错，比如有人写过<a href='http://blog.jobbole.com/37863/'>21个嵌套的回调</a>）。如果采用Promise封装的ajax，可以很优雅的解决它：
+使用回调嵌套可以得到正确的结果，但是看起来就没那么好看了，回调一多就成了<a href='http://callbackhell.com/'>噩梦</a>（最后的闭合标签和容易错，比如有人写过<a href='http://blog.jobbole.com/37863/'>21个嵌套的回调</a>）。如果采用Promise封装的ajax，可以很优雅的解决它：
 
 ```
 var arr = [];
