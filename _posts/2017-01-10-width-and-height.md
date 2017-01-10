@@ -8,6 +8,7 @@ categories: [javascript]
 总结自：<a href='http://www.cnblogs.com/polk6/archive/2016/01/03/5051935.html'>HTML 获取屏幕、浏览器、页面的高度宽度</a>
 
 ## 一、介绍
+
 ### 1. 容器
 
 一个页面的展示，从外到内的容器为：屏幕、浏览器以及页面本身。
