@@ -61,6 +61,7 @@ Vue.component('dynamicComponent', {
 ```
 
 还可以根据数据来确定加载什么组件，彻底做到动态性：
+
 ```
 <dynamic-component :name="componentName"></dynamic-component>
 ```
