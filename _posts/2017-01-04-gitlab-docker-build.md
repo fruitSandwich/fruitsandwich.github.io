@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用docker快速搭建gitlab环境"
-categories: [git]
+categories: [git,工具]
 ---
 
 

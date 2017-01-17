@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用gitlab-ci持续集成"
-categories: [git]
+categories: [git,工具]
 ---
 
 之前尝试了使用docker部署gitlab管理私有git代码库。可以看<a href='/gitlab-docker-build/'>这里</a>。今天尝试了一下gitlab ci进行持续集成
