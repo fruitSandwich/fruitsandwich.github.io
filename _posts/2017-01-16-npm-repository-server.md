@@ -48,3 +48,14 @@ docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia:latest
 容器启动后，可以在docker toolbaox Kitematic中看到容器的状态：
 
 ![image](/asserts/201701/kitematic-sinopia.png)
+
+打开对应的web：
+
+![image](/asserts/201701/sinopia.png)
+
+使用npm私有库：
+
+```
+npm set registry http://192.168.205.88:4873
+npm adduser --registry http://192.168.205.88:4873
+```
