@@ -46,9 +46,7 @@ let component = {
 Vue.component('dynamicComponent', {
   props: ['name'],
   render: function (h) {
-    let com = h(component[this.name], {})
-    return h('div', {},
-      [com])
+    return createElement(components[this.name], {})
   },
 });
 ```
