@@ -2,7 +2,7 @@
 layout: post
 title:  "编程范式与设计模式"
 categories: [pardigm,patterns]
-
+---
 
 ## 1.编程范式
 
