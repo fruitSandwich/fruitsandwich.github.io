@@ -184,6 +184,7 @@ categories: [pardigm,patterns]
   ```
 
 4. 使用整套模式
+
   ```
   TextEditor textEditor = new TextEditor( new PlainTextFormatter() );
   textEditor.publishText( "ERROR - something bad happened" );
@@ -205,6 +206,7 @@ categories: [pardigm,patterns]
     }
   }
   ```
+  
 2. 封装过滤文本和转换函数
 
   ```
