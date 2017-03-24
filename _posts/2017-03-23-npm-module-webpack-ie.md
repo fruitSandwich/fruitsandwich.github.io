@@ -4,7 +4,7 @@ title:  "npm 模块 Webpack打包 IE下的问题"
 categories: [npm]
 ---
 
-前面提到了可以安装私有的npm仓库，通过内网发布和安装js模块。还有一种方法可以在内网环境使用npm安装js模块，那就是npm install git+：
+前面提到了可以<a href='/npm-repository-server'>安装私有的npm仓库</a>，通过内网发布和安装js模块。还有一种方法可以在内网环境使用npm安装js模块，那就是npm install git+：
 
 ```
 npm install git+https://github.com/jquery/jquery.git
