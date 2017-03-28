@@ -29,7 +29,7 @@ package.json中需要指定模块出口,比如jquery:
 
 src/export.js:
 ```
-//CMD规范
+//CommonJS规范
 const js1 = require('js1');
 
 function b() {
@@ -54,7 +54,7 @@ package.json:
 const js2 = require('js2');
 js2.b()
 ```
-CMD规范下，Node环境可直接运行得到正确结果。
+CommonJS规范下，Node环境可直接运行得到正确结果。
 
 通过WebPack打包后在浏览器运行，Chrome、Firefox等可得到正确结果，IE下报错：
 
@@ -76,7 +76,7 @@ function b() {
     console.log('b')
 }
 
-module.exports = {b：b};
+module.exports = {b：b};//不使用ES6简洁写法
 ```
 
 这样就可以级联子项目一块打包编译在IE下也能支持。
