@@ -6,7 +6,7 @@ categories: [javascript]
 
 javascript是单线程的，但有两种执行模式:同步和异步。
 
-关于同步和异步的效果我写了一个<a href='http://blog.fruitsandwich.cc/webTraining/lession03/asynchronous.html'>示例</a>。
+关于同步和异步的效果我写了一个<a href='http://fruitsandwich.github.io/webTraining/lession03/asynchronous.html'>示例</a>。
 
 同步就是执行顺序和任务顺序时一致，同步的；异步任务都需要指定一个或多个回调函数，前一个任务执行结束后，不是执行后一个任务而是执行回调函数，后一个任务不等前一个任务执行完就执行，程序的执行顺序和任务排列顺序是不一致的，异步的。
 
